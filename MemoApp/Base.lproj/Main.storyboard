@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memo App View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MemoAppViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DV5-du-fow">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XAx-ea-RKq">
+                                    <size key="itemSize" width="395" height="71"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WordCell" id="8m2-di-Qmo" customClass="WordCell" customModule="MemoApp">
+                                        <rect key="frame" x="9.5" y="50" width="395" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yqA-FD-vEm">
+                                            <rect key="frame" x="0.0" y="0.0" width="395" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPa-nO-Bk3">
+                                                    <rect key="frame" x="55" y="18" width="114" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="meaning..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pav-fi-Qog">
+                                                    <rect key="frame" x="244" y="18" width="114" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGr-is-ZnY">
+                                                    <rect key="frame" x="8" y="20" width="33" height="30"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="circle" catalog="system" symbolScale="medium"/>
+                                                    </state>
+                                                    <state key="selected" image="checkmark.circle" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pav-fi-Qog" secondAttribute="trailing" constant="37" id="CoY-ZW-ASX"/>
+                                                <constraint firstItem="vPa-nO-Bk3" firstAttribute="leading" secondItem="AGr-is-ZnY" secondAttribute="trailing" constant="14" id="EhW-oa-Q8Q"/>
+                                                <constraint firstItem="AGr-is-ZnY" firstAttribute="centerY" secondItem="yqA-FD-vEm" secondAttribute="centerY" id="O99-QX-Oaw"/>
+                                                <constraint firstItem="pav-fi-Qog" firstAttribute="width" secondItem="vPa-nO-Bk3" secondAttribute="width" id="RME-UX-7c4"/>
+                                                <constraint firstItem="vPa-nO-Bk3" firstAttribute="centerY" secondItem="yqA-FD-vEm" secondAttribute="centerY" id="cLB-6l-0xy"/>
+                                                <constraint firstItem="AGr-is-ZnY" firstAttribute="leading" secondItem="yqA-FD-vEm" secondAttribute="leading" constant="8" id="vUD-1Q-dlj"/>
+                                                <constraint firstItem="pav-fi-Qog" firstAttribute="centerY" secondItem="yqA-FD-vEm" secondAttribute="centerY" id="wiJ-9T-qu4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="395" height="71"/>
+                                        <connections>
+                                            <outlet property="meaningText" destination="pav-fi-Qog" id="jC6-7T-tsU"/>
+                                            <outlet property="selectionButton" destination="AGr-is-ZnY" id="eoT-fw-xvr"/>
+                                            <outlet property="wordText" destination="vPa-nO-Bk3" id="04Q-Yp-pay"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="AJe-l6-MG1" userLabel="HeaderView" customClass="HeaderView" customModule="MemoApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHZ-XH-PW1">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meanings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeE-Bk-bLx">
+                                            <rect key="frame" x="207" y="15" width="207" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LHZ-XH-PW1" firstAttribute="width" secondItem="eeE-Bk-bLx" secondAttribute="width" id="3q4-8p-ujX"/>
+                                        <constraint firstItem="eeE-Bk-bLx" firstAttribute="centerY" secondItem="AJe-l6-MG1" secondAttribute="centerY" id="BgI-G6-Ok5"/>
+                                        <constraint firstAttribute="bottom" secondItem="LHZ-XH-PW1" secondAttribute="bottom" id="FWb-lb-exw"/>
+                                        <constraint firstItem="eeE-Bk-bLx" firstAttribute="leading" secondItem="LHZ-XH-PW1" secondAttribute="trailing" id="fhi-Jf-2Bd"/>
+                                        <constraint firstItem="LHZ-XH-PW1" firstAttribute="leading" secondItem="AJe-l6-MG1" secondAttribute="leading" id="jSc-dT-alC"/>
+                                        <constraint firstItem="LHZ-XH-PW1" firstAttribute="centerY" secondItem="AJe-l6-MG1" secondAttribute="centerY" id="lNo-9d-laK"/>
+                                        <constraint firstItem="LHZ-XH-PW1" firstAttribute="top" secondItem="AJe-l6-MG1" secondAttribute="top" id="rgk-qI-rHL"/>
+                                        <constraint firstAttribute="trailing" secondItem="eeE-Bk-bLx" secondAttribute="trailing" id="xfZ-aU-2AR"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="MeaningsTitle" destination="eeE-Bk-bLx" id="BXb-y7-zDl"/>
+                                        <outlet property="wordsTitle" destination="LHZ-XH-PW1" id="7kD-ht-W0c"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3LE-IU-HMB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yyw-nX-Wj0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DV5-du-fow" secondAttribute="trailing" id="FmF-MM-28V"/>
+                            <constraint firstItem="DV5-du-fow" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VF7-pr-gJ1"/>
+                            <constraint firstItem="DV5-du-fow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oBa-SC-6Fn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DV5-du-fow" secondAttribute="bottom" id="zIL-oz-AXD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
