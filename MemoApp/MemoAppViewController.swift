@@ -17,7 +17,7 @@ class MemoAppViewController: UIViewController {
 
 }
 
-extension MemoAppViewController: UICollectionViewDataSource {
+extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여주기 위함
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
@@ -38,7 +38,7 @@ extension MemoAppViewController: UICollectionViewDataSource {
     }
 }
 
-extension MemoAppViewController: UICollectionViewDelegateFlowLayout { // flowlayout 과 차이점?
+extension MemoAppViewController: UICollectionViewDelegateFlowLayout { // flowlayout 과 차이점? 셀의 크기
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
         let height: CGFloat = 40
@@ -58,11 +58,16 @@ class HeaderView: UICollectionReusableView {
 
 class WordCell: UICollectionViewCell {
     
-    @IBOutlet weak var selectionButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var wordText: UITextField!
     @IBOutlet weak var meaningText: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    @IBAction func checkButtonTapped(_ sender: Any) {// 체크 버튼 활성화
+        checkButton.isSelected = !checkButton.isSelected
+        let isDone = checkButton.isSelected
+        
     }
 }
