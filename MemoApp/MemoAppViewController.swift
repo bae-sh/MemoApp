@@ -8,24 +8,31 @@
 import UIKit
 
 class MemoAppViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    let wordViewModel = WordViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func creatButtonTapped(_ sender: Any) {
+        let word = WordManager.shared.creatWord()
+        wordViewModel.addWord(word)
+        collectionView.reloadData()
+    }
 }
 
 extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여주기 위함
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return wordViewModel.words.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WordCell", for: indexPath) as? WordCell else {
             return UICollectionViewCell()
         }
+        
         return cell
     }
     
@@ -67,7 +74,7 @@ class WordCell: UICollectionViewCell {
     }
     @IBAction func checkButtonTapped(_ sender: Any) {// 체크 버튼 활성화
         checkButton.isSelected = !checkButton.isSelected
-        let isDone = checkButton.isSelected
         
     }
 }
+

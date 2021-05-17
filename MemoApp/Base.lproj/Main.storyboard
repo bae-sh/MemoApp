@@ -57,7 +57,7 @@
                                                     <state key="normal">
                                                         <imageReference key="image" image="circle" catalog="system" symbolScale="medium"/>
                                                     </state>
-                                                    <state key="selected" image="checkmark.circle" catalog="system"/>
+                                                    <state key="selected" image="checkmark.circle.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="checkButtonTapped:" destination="8m2-di-Qmo" eventType="touchUpInside" id="NEq-X9-cSQ"/>
                                                     </connections>
@@ -117,10 +117,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Yyw-nX-Wj0"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-DR-im8" userLabel="SettingButtonView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-DR-im8" userLabel="SettingButtonView" customClass="SettingButtonView" customModule="MemoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9o-Df-W3q">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9o-Df-W3q" userLabel="creatButton">
                                         <rect key="frame" x="376" y="12" width="28" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <color key="tintColor" systemColor="systemOrangeColor"/>
@@ -128,6 +128,11 @@
                                             <imageReference key="image" image="plus.app" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="default"/>
                                         </state>
+                                        <connections>
+                                            <action selector="creatButtonTapped:" destination="dJd-3F-lqV" eventType="touchUpInside" id="GlE-wr-bKk"/>
+                                            <action selector="creatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvS-yG-9UW"/>
+                                            <action selector="sd:" destination="dJd-3F-lqV" eventType="touchUpInside" id="hEZ-Hc-1Dc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,14 +155,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DV5-du-fow" secondAttribute="bottom" id="zIL-oz-AXD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="DV5-du-fow" id="LBK-t1-knx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="dJd-3F-lqV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
