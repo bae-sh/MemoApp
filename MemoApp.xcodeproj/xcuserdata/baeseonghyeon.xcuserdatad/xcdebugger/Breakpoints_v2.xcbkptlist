@@ -168,8 +168,8 @@
             filePath = "MemoApp/Word.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "addWord(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,13 +184,13 @@
             filePath = "MemoApp/MemoAppViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "04B5CC72-D476-40DC-80B0-A0026862FF74 - aa0e28392386da62"
+                  uuid = "04B5CC72-D476-40DC-80B0-A0026862FF74 - aa0e28392386da83"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -200,12 +200,12 @@
                   urlString = "file:///Users/baeseonghyeon/study/git/MemoApp/MemoApp/MemoAppViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "676">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "936">
                </Location>
                <Location
-                  uuid = "04B5CC72-D476-40DC-80B0-A0026862FF74 - fd18deb833877c73"
+                  uuid = "04B5CC72-D476-40DC-80B0-A0026862FF74 - fd18deb833877c12"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -215,9 +215,9 @@
                   urlString = "file:///Users/baeseonghyeon/study/git/MemoApp/MemoApp/MemoAppViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "36">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>

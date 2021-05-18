@@ -32,10 +32,21 @@ extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여�
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WordCell", for: indexPath) as? WordCell else {
             return UICollectionViewCell()
         }
+        
         var word = wordViewModel.words[indexPath.item]
+        
         cell.editWordTapHandler = { text in
-            word.meaning = text
+            word.word = text
+            self.wordViewModel.updateWord(word)
+            collectionView.reloadData()
         }
+        
+        cell.editMeaningTapHandler = { text in
+            word.meaning = text
+            self.wordViewModel.updateWord(word)
+            collectionView.reloadData()
+        }
+        cell.updateUI(word: word)
         return cell
     }
     
@@ -73,6 +84,7 @@ class WordCell: UICollectionViewCell {
     @IBOutlet weak var meaningText: UITextField!
     
     var editWordTapHandler: ((String) -> Void)?
+    var editMeaningTapHandler: ((String) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -81,9 +93,17 @@ class WordCell: UICollectionViewCell {
         checkButton.isSelected = !checkButton.isSelected
         
     }
+    func updateUI(word: Word) {
+        wordText.text = word.word
+        meaningText.text = word.meaning
+    }
     @IBAction func editWord(_ sender: Any) {
         let text = wordText.text ?? ""
         editWordTapHandler?(text)
+    }
+    @IBAction func editMeaning(_ sender: Any) {
+        let text = meaningText.text ?? ""
+        editMeaningTapHandler?(text)
     }
 }
 

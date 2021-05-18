@@ -7,10 +7,20 @@
 
 import UIKit
 
-struct Word {
+struct Word: Equatable {
     let id: Int
     var word: String
     var meaning: String
+    
+    mutating func update(word: String, meaning: String) {
+        self.word = word
+        self.meaning = meaning
+    }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        // TODO: 동등 조건 추가
+        return lhs.id == rhs.id
+    }
 }
 
 class WordManager {
@@ -30,6 +40,12 @@ class WordManager {
         sortWord()
     }
     
+    func updateWord(_ word: Word) {
+        //TODO: updatee 로직 추가
+        guard let index = words.firstIndex(of: word) else { return }
+        words[index].update(word: word.word, meaning: word.meaning)
+    }
+    
     func sortWord() {
         words = words.sorted { prev, next in
             return prev.id < next.id
@@ -46,5 +62,9 @@ class WordViewModel {
     
     func addWord(_ word: Word) {
         manager.addWord(word)
+    }
+    
+    func updateWord(_ word: Word) {
+        manager.updateWord(word)
     }
 }
