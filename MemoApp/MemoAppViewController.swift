@@ -5,6 +5,11 @@
 //  Created by 배성현 on 2021/05/12.
 //
 
+// viewmodel과 manager 싱글톤 탭 핸들러 무엇인지
+// 싱글톤의경우 이 앱에서 사용하는 wordManager가 하나이므로 싱글톤을 사용해도 무관
+// 뷰 모델에서는 뷰에 대한 정보를 가저옴
+// 매니저는 워드에 해당하는 정보를 관리함
+// Q)selector 은 무엇인가
 import UIKit
 
 class MemoAppViewController: UIViewController {
@@ -13,7 +18,10 @@ class MemoAppViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func tapGesture(_ sender: Any) {
+       self.view.endEditing(true)
     }
     
     @IBAction func creatButtonTapped(_ sender: Any) {
@@ -34,7 +42,6 @@ extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여�
         }
         
         var word = wordViewModel.words[indexPath.item]
-        
         cell.editWordTapHandler = { text in
             word.word = text
             self.wordViewModel.updateWord(word)
@@ -50,13 +57,6 @@ extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여�
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderView", for: indexPath) as? HeaderView
-        else {
-            return UICollectionReusableView()
-        }
-        return header
-    }
 }
 
 extension MemoAppViewController: UICollectionViewDelegateFlowLayout { // flowlayout 과 차이점? 셀의 크기
@@ -66,17 +66,6 @@ extension MemoAppViewController: UICollectionViewDelegateFlowLayout { // flowlay
         return CGSize(width: width, height: height)
     }
 }
-
-class HeaderView: UICollectionReusableView {
-    
-    @IBOutlet weak var wordsTitle: UILabel!
-    @IBOutlet weak var MeaningsTitle: UILabel!
-    
-    override func awakeFromNib() {//?
-        super.awakeFromNib()
-    }
-}
-
 class WordCell: UICollectionViewCell {
     
     @IBOutlet weak var checkButton: UIButton!

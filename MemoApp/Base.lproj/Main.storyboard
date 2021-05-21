@@ -21,8 +21,8 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DV5-du-fow">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XAx-ea-RKq">
-                                    <size key="itemSize" width="395" height="71"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="214-ko-xTm">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -146,6 +146,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DV5-du-fow" secondAttribute="trailing" id="FmF-MM-28V"/>
                             <constraint firstItem="gNj-iV-9D2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Smd-hu-Kwy"/>
@@ -158,6 +159,9 @@
                             <constraint firstItem="DV5-du-fow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oBa-SC-6Fn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DV5-du-fow" secondAttribute="bottom" id="zIL-oz-AXD"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pHS-rx-EFn" appends="YES" id="5Pl-DE-lWm"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="DV5-du-fow" id="LBK-t1-knx"/>
@@ -165,6 +169,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="dJd-3F-lqV" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="pHS-rx-EFn">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="RjD-Jm-m68"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </scene>

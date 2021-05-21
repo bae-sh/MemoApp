@@ -37,7 +37,6 @@ class WordManager {
     
     func addWord(_ word: Word) {
         words.append(word)
-        sortWord()
     }
     
     func updateWord(_ word: Word) {
@@ -46,11 +45,6 @@ class WordManager {
         words[index].update(word: word.word, meaning: word.meaning)
     }
     
-    func sortWord() {
-        words = words.sorted { prev, next in
-            return prev.id < next.id
-        }
-    }
 }
 
 class WordViewModel {
