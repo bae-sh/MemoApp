@@ -14,6 +14,8 @@
 		F462E00F264BD6E600D1326B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462E00D264BD6E600D1326B /* Main.storyboard */; };
 		F462E011264BD6E800D1326B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F462E010264BD6E800D1326B /* Assets.xcassets */; };
 		F462E014264BD6E800D1326B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462E012264BD6E800D1326B /* LaunchScreen.storyboard */; };
+		F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */; };
+		F4C3A46F2659043600BC9C70 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A46E2659043600BC9C70 /* WordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F462E010264BD6E800D1326B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F462E013264BD6E800D1326B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F462E015264BD6E800D1326B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		F4C3A46E2659043600BC9C70 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				F462E007264BD6E600D1326B /* AppDelegate.swift */,
 				F462E009264BD6E600D1326B /* SceneDelegate.swift */,
+				F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */,
+				F4C3A46E2659043600BC9C70 /* WordCell.swift */,
 				F462E00B264BD6E600D1326B /* MemoAppViewController.swift */,
 				F413B789264D055B0033E5CF /* Word.swift */,
 				F462E00D264BD6E600D1326B /* Main.storyboard */,
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */,
 				F462E00C264BD6E600D1326B /* MemoAppViewController.swift in Sources */,
 				F462E008264BD6E600D1326B /* AppDelegate.swift in Sources */,
+				F4C3A46F2659043600BC9C70 /* WordCell.swift in Sources */,
 				F413B78A264D055B0033E5CF /* Word.swift in Sources */,
 				F462E00A264BD6E600D1326B /* SceneDelegate.swift in Sources */,
 			);
