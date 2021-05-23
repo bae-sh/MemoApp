@@ -9,14 +9,17 @@ import UIKit
 
 class EditViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     
     let wordViewModel = WordViewModel()
+    var willDeleteWords: [Word] = [] // 체크된 목록 리스트
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        editButton.layer.borderColor = UIColor.orange.cgColor
-        editButton.layer.borderWidth = 1.5
-        editButton.layer.cornerRadius = 5
+        clearButton.layer.borderColor = UIColor.systemOrange.cgColor // 완료 버튼 테두리
+        clearButton.layer.borderWidth = 1.5
+        clearButton.layer.cornerRadius = 5
     }
     
     @IBAction func tapGesture(_ sender: Any) {//빈 화면 클릭시 키보드 내림
@@ -28,7 +31,13 @@ class EditViewController: UIViewController {
         wordViewModel.addWord(word)
         collectionView.reloadData()
     }
+    
     @IBAction func deleteButtonTapped(_ sender: Any) {
+        wordViewModel.deleteWord(willDeleteWords)
+        collectionView.reloadData()
+    }
+    
+    @IBAction func clearButtonTapped(_ sender: Any) {
         dismiss(animated: true){
         }
     }
@@ -45,6 +54,7 @@ extension EditViewController: UICollectionViewDataSource { // 셀을 보여주�
         }
         
         var word = wordViewModel.words[indexPath.item]
+        let selected = willDeleteWords.contains(word)
         cell.creatWordTapHandler = { text in
             word.word = text
             self.wordViewModel.updateWord(word)
@@ -56,7 +66,16 @@ extension EditViewController: UICollectionViewDataSource { // 셀을 보여주�
             self.wordViewModel.updateWord(word)
             collectionView.reloadData()
         }
-        cell.updateUI(word: word)
+        cell.deleteCheckBoxTapHandler = { isSelected in
+            if isSelected {
+                self.willDeleteWords.append(word)
+            }else{
+                self.willDeleteWords = self.willDeleteWords.filter { $0.id != word.id }
+            }
+            cell.deleteCheckButton.isSelected = isSelected
+        }
+        
+        cell.updateUIEditVC(word: word, isSelected: selected)
         return cell
     }
     

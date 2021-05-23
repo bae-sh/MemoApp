@@ -11,10 +11,12 @@ struct Word: Equatable {
     let id: Int
     var word: String
     var meaning: String
+    var isDone: Bool
     
-    mutating func update(word: String, meaning: String) {
+    mutating func update(word: String, meaning: String, isDone: Bool) {
         self.word = word
         self.meaning = meaning
+        self.isDone = isDone
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
@@ -32,7 +34,7 @@ class WordManager {
     func creatWord() -> Word {
         let nextId = WordManager.lastId + 1
         WordManager.lastId = nextId
-        return Word(id: nextId, word: "", meaning: "")
+        return Word(id: nextId, word: "", meaning: "",isDone: false)
     }
     
     func addWord(_ word: Word) {
@@ -42,9 +44,14 @@ class WordManager {
     func updateWord(_ word: Word) {
         //TODO: updatee 로직 추가
         guard let index = words.firstIndex(of: word) else { return }
-        words[index].update(word: word.word, meaning: word.meaning)
+        words[index].update(word: word.word, meaning: word.meaning, isDone: word.isDone)
     }
     
+    func deleteWord(_ deleteWords: [Word]) {
+        for word in deleteWords {
+            words = words.filter { $0.id != word.id }
+        }
+    }
 }
 
 class WordViewModel {
@@ -60,5 +67,9 @@ class WordViewModel {
     
     func updateWord(_ word: Word) {
         manager.updateWord(word)
+    }
+    
+    func deleteWord(_ words: [Word]) {
+        manager.deleteWord(words)
     }
 }

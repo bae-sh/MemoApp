@@ -20,13 +20,15 @@ class MemoAppViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        editButton.layer.borderColor = UIColor.orange.cgColor
+        editButton.layer.borderColor = UIColor.systemOrange.cgColor
         editButton.layer.borderWidth = 1.5
         editButton.layer.cornerRadius = 5
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
     }
+    
     @IBAction func tapGesture(_ sender: Any) {
         self.view.endEditing(true)
     }
@@ -64,7 +66,7 @@ extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여�
             self.wordViewModel.updateWord(word)
             collectionView.reloadData()
         }
-        cell.updateUI(word: word)
+        cell.updateUIMemoVC(word: word)
         return cell
     }
     

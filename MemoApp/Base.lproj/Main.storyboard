@@ -65,7 +65,7 @@
                                                     </state>
                                                     <state key="selected" image="checkmark.circle.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="checkButtonTapped:" destination="8m2-di-Qmo" eventType="touchUpInside" id="NEq-X9-cSQ"/>
+                                                        <action selector="checkButtonTapped:" destination="8m2-di-Qmo" eventType="touchUpInside" id="Zpc-DG-k62"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -80,7 +80,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="395" height="71"/>
                                         <connections>
-                                            <outlet property="checkButton" destination="AGr-is-ZnY" id="3dt-NO-fZd"/>
+                                            <outlet property="checkButton" destination="AGr-is-ZnY" id="Dz4-Is-4Tk"/>
                                             <outlet property="meaningText" destination="pav-fi-Qog" id="jC6-7T-tsU"/>
                                             <outlet property="wordText" destination="vPa-nO-Bk3" id="04Q-Yp-pay"/>
                                         </connections>
@@ -103,9 +103,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="default"/>
                                         </state>
                                         <connections>
-                                            <action selector="creatButtonTapped:" destination="dJd-3F-lqV" eventType="touchUpInside" id="GlE-wr-bKk"/>
-                                            <action selector="creatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvS-yG-9UW"/>
-                                            <action selector="sd:" destination="dJd-3F-lqV" eventType="touchUpInside" id="hEZ-Hc-1Dc"/>
+                                            <action selector="creatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFr-2I-Fpq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akS-TI-nTI">
@@ -186,7 +184,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="dJd-3F-lqV" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="pHS-rx-EFn">
                     <connections>
                         <action selector="tapGesture:" destination="BYZ-38-t0r" id="RjD-Jm-m68"/>
@@ -247,14 +244,15 @@
                                                             </connections>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umG-F1-jlF">
-                                                            <rect key="frame" x="8" y="24.5" width="20" height="22"/>
-                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                            <rect key="frame" x="8" y="21.5" width="20" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                            <color key="tintColor" systemColor="systemPinkColor"/>
                                                             <state key="normal">
-                                                                <imageReference key="image" image="circle" catalog="system" symbolScale="medium"/>
+                                                                <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             </state>
-                                                            <state key="selected" image="checkmark.circle.fill" catalog="system"/>
+                                                            <state key="selected" image="checkmark.square.fill" catalog="system"/>
                                                             <connections>
-                                                                <action selector="checkButtonTapped:" destination="oQd-sP-CSg" eventType="touchUpInside" id="orw-Hd-e5E"/>
+                                                                <action selector="deleteCheckButtonTapped:" destination="oQd-sP-CSg" eventType="touchUpInside" id="PMR-RZ-1WK"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -269,7 +267,7 @@
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="395" height="71"/>
                                                 <connections>
-                                                    <outlet property="checkButton" destination="umG-F1-jlF" id="M6c-0h-t3o"/>
+                                                    <outlet property="deleteCheckButton" destination="umG-F1-jlF" id="utp-EM-mXY"/>
                                                     <outlet property="meaningText" destination="3F8-0g-jFn" id="kIt-MK-coN"/>
                                                     <outlet property="wordText" destination="GaO-wE-xia" id="jyS-er-8pR"/>
                                                 </connections>
@@ -286,38 +284,50 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KE-hc-Lo8" userLabel="creatButton">
                                                 <rect key="frame" x="20" y="12" width="28" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" systemColor="systemPinkColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="plus.app" catalog="system" symbolScale="large"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="default"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="creatButtonTapped:" destination="dJd-3F-lqV" eventType="touchUpInside" id="Le5-uN-PLM"/>
-                                                    <action selector="creatButtonTapped:" destination="cHb-cX-uvK" eventType="touchUpInside" id="thN-OM-xCj"/>
-                                                    <action selector="sd:" destination="dJd-3F-lqV" eventType="touchUpInside" id="vdr-mu-1U0"/>
+                                                    <action selector="creatButtonTapped:" destination="cHb-cX-uvK" eventType="touchUpInside" id="qlf-33-SeI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCH-02-7hs">
-                                                <rect key="frame" x="344" y="12" width="50" height="26"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCH-02-7hs" userLabel="delete Button">
+                                                <rect key="frame" x="322" y="12" width="20" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="PbG-g1-AKU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="tintColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title=" Delete ">
+                                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                                <state key="normal" image="trash" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="deleteButtonTapped:" destination="cHb-cX-uvK" eventType="touchUpInside" id="RNO-yu-rTv"/>
+                                                    <action selector="deleteButtonTapped:" destination="cHb-cX-uvK" eventType="touchUpInside" id="VNq-VZ-S5r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-c6-Ydf" userLabel="clear Button">
+                                                <rect key="frame" x="362" y="12" width="32" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="PqK-C9-Gru"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title=" 완료 ">
+                                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearButtonTapped:" destination="cHb-cX-uvK" eventType="touchUpInside" id="JAu-xA-Rq6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="wCH-02-7hs" secondAttribute="trailing" constant="20" id="AyX-Zi-iw9"/>
+                                            <constraint firstAttribute="trailing" secondItem="fLI-c6-Ydf" secondAttribute="trailing" constant="20" id="D7x-9A-uZa"/>
+                                            <constraint firstItem="fLI-c6-Ydf" firstAttribute="centerY" secondItem="WOy-up-ist" secondAttribute="centerY" id="IbI-hO-DQk"/>
                                             <constraint firstItem="7KE-hc-Lo8" firstAttribute="leading" secondItem="WOy-up-ist" secondAttribute="leading" constant="20" id="LYH-Ts-F2s"/>
                                             <constraint firstAttribute="height" constant="50" id="PpK-Fg-rVC"/>
                                             <constraint firstItem="7KE-hc-Lo8" firstAttribute="centerY" secondItem="WOy-up-ist" secondAttribute="centerY" id="V7T-S6-Ku5"/>
+                                            <constraint firstItem="fLI-c6-Ydf" firstAttribute="leading" secondItem="wCH-02-7hs" secondAttribute="trailing" constant="20" id="YH6-3n-FCH"/>
                                             <constraint firstItem="wCH-02-7hs" firstAttribute="centerY" secondItem="WOy-up-ist" secondAttribute="centerY" id="hA4-Tu-KyI"/>
                                         </constraints>
                                     </view>
@@ -374,8 +384,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="OGk-KK-Ca3"/>
                     <connections>
+                        <outlet property="clearButton" destination="fLI-c6-Ydf" id="cdb-oZ-9Gt"/>
                         <outlet property="collectionView" destination="d79-qw-hOa" id="OYd-Nz-yif"/>
-                        <outlet property="editButton" destination="wCH-02-7hs" id="wlh-sm-M9e"/>
+                        <outlet property="deleteButton" destination="fLI-c6-Ydf" id="NjT-B1-9Iz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik2-7U-s9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -390,13 +401,19 @@
     </scenes>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
