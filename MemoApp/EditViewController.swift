@@ -11,6 +11,7 @@ class EditViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var AllCheckButton: UIButton!
     
     let wordViewModel = WordViewModel()
     var willDeleteWords: [Word] = [] // 체크된 목록 리스트
@@ -34,6 +35,19 @@ class EditViewController: UIViewController {
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
         wordViewModel.deleteWord(willDeleteWords)
+        willDeleteWords = []
+        AllCheckButton.isSelected = false
+        collectionView.reloadData()
+    }
+    
+    @IBAction func allCheckButtonTapped(_ sender: Any) {
+        AllCheckButton.isSelected = !AllCheckButton.isSelected
+        let selected = AllCheckButton.isSelected
+        if(selected){
+            willDeleteWords = wordViewModel.words
+        }else{
+            willDeleteWords = []
+        }
         collectionView.reloadData()
     }
     
@@ -69,8 +83,12 @@ extension EditViewController: UICollectionViewDataSource { // 셀을 보여주�
         cell.deleteCheckBoxTapHandler = { isSelected in
             if isSelected {
                 self.willDeleteWords.append(word)
+                if(self.willDeleteWords.count == self.wordViewModel.words.count){// 전부 체크했을때 allCheckbutton도 체크
+                    self.AllCheckButton.isSelected = true
+                }
             }else{
                 self.willDeleteWords = self.willDeleteWords.filter { $0.id != word.id }
+                self.AllCheckButton.isSelected = false
             }
             cell.deleteCheckButton.isSelected = isSelected
         }

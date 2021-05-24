@@ -32,13 +32,6 @@ class MemoAppViewController: UIViewController {
     @IBAction func tapGesture(_ sender: Any) {
         self.view.endEditing(true)
     }
-    
-    @IBAction func creatButtonTapped(_ sender: Any) {
-        let word = WordManager.shared.creatWord()
-        wordViewModel.addWord(word)
-        collectionView.reloadData()
-    }
-    
     @IBAction func editButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "show", sender: nil)
     }
