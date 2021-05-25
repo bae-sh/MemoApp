@@ -92,7 +92,6 @@ extension EditViewController: UICollectionViewDataSource { // 셀을 보여주�
             }
             cell.deleteCheckButton.isSelected = isSelected
         }
-        
         cell.updateUIEditVC(word: word, isSelected: selected)
         return cell
     }

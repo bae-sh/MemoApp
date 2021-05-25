@@ -35,6 +35,7 @@ class MemoAppViewController: UIViewController {
     @IBAction func editButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "show", sender: nil)
     }
+    
 }
 
 extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여주기 위함
