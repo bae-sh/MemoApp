@@ -119,10 +119,23 @@
                                             <segue destination="cHb-cX-uvK" kind="show" identifier="show" id="3YA-C2-G50"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-cs-ohI">
+                                        <rect key="frame" x="30" y="13.5" width="24" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KZ5-cs-ohI" secondAttribute="height" multiplier="1:1" constant="1" id="Wsn-ND-g4O"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" image="shuffle" catalog="system"/>
+                                        <connections>
+                                            <action selector="shuffleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8K-pc-4nb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="KZ5-cs-ohI" firstAttribute="centerY" secondItem="UNp-DR-im8" secondAttribute="centerY" id="4NB-CA-GPq"/>
                                     <constraint firstAttribute="trailing" secondItem="akS-TI-nTI" secondAttribute="trailing" constant="20" id="AV5-oN-caI"/>
+                                    <constraint firstItem="KZ5-cs-ohI" firstAttribute="leading" secondItem="UNp-DR-im8" secondAttribute="leading" constant="30" id="Ate-UU-ZXd"/>
                                     <constraint firstItem="akS-TI-nTI" firstAttribute="centerY" secondItem="UNp-DR-im8" secondAttribute="centerY" id="VCb-af-pgw"/>
                                     <constraint firstAttribute="height" constant="50" id="sbS-70-NQV"/>
                                 </constraints>
@@ -177,6 +190,7 @@
                     <connections>
                         <outlet property="collectionView" destination="DV5-du-fow" id="LBK-t1-knx"/>
                         <outlet property="editButton" destination="akS-TI-nTI" id="RjV-lg-Huz"/>
+                        <outlet property="shuffleButton" destination="KZ5-cs-ohI" id="hMR-ay-zEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -415,6 +429,7 @@
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">

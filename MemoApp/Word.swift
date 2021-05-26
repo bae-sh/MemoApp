@@ -52,6 +52,10 @@ class WordManager {
             words = words.filter { $0.id != word.id }
         }
     }
+    
+    func shuffleWord(){
+        words = words.shuffled()
+    }
 }
 
 class WordViewModel {
@@ -71,5 +75,9 @@ class WordViewModel {
     
     func deleteWord(_ words: [Word]) {
         manager.deleteWord(words)
+    }
+    
+    func shuffleWord(){
+        manager.shuffleWord()
     }
 }

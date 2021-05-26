@@ -19,12 +19,14 @@ class WordCell: UICollectionViewCell {
     var creatWordTapHandler: ((String) -> Void)?
     var creatMeaningTapHandler: ((String) -> Void)?
     var deleteCheckBoxTapHandler: ((Bool) -> Void)?
+    var checkBoxTapHandler: ((Bool) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     @IBAction func checkButtonTapped(_ sender: Any) {
         checkButton.isSelected = !checkButton.isSelected
+        checkBoxTapHandler?(checkButton.isSelected)
     }
     @IBAction func wordButtonTapped(_ sender: Any) {
         wordButton.isSelected = !wordButton.isSelected
@@ -51,6 +53,7 @@ class WordCell: UICollectionViewCell {
     func updateUIMemoVC(word: Word) {
         updateButton(word: word,button: wordButton)
         updateButton(word: word,button: meanButton)
+        checkButton.isSelected = word.isDone
     }
     
     func updateUIEditVC(word: Word, isSelected: Bool) {
