@@ -22,6 +22,7 @@ class MemoAppViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayer()
+        wordViewModel.loadTasks()
     }
     
     override func viewWillAppear(_ animated: Bool) {

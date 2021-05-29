@@ -18,7 +18,7 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clearButton.layer.borderColor = UIColor.systemOrange.cgColor // 완료 버튼 테두리
+        clearButton.layer.borderColor = UIColor.systemPink.cgColor // 완료 버튼 테두리
         clearButton.layer.borderWidth = 1.5
         clearButton.layer.cornerRadius = 5
     }

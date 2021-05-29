@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Word: Equatable {
+struct Word: Codable, Equatable {
     let id: Int
     var word: String
     var meaning: String
@@ -39,22 +39,37 @@ class WordManager {
     
     func addWord(_ word: Word) {
         words.append(word)
+        saveWord()
     }
     
     func updateWord(_ word: Word) {
         //TODO: updatee 로직 추가
         guard let index = words.firstIndex(of: word) else { return }
         words[index].update(word: word.word, meaning: word.meaning, isDone: word.isDone)
+        saveWord()
     }
     
     func deleteWord(_ deleteWords: [Word]) {
         for word in deleteWords {
             words = words.filter { $0.id != word.id }
         }
+        saveWord()
     }
     
     func shuffleWord(){
         words = words.shuffled()
+        saveWord()
+    }
+    
+    func saveWord(){
+        Storage.store(words, to: .documents, as: "words.json")
+    }
+    
+    func retrieveWord() {
+        words = Storage.retrive("words.json", from: .documents, as: [Word].self) ?? []
+        
+        let lastId = words.last?.id ?? 0
+        WordManager.lastId = lastId
     }
 }
 
@@ -79,5 +94,9 @@ class WordViewModel {
     
     func shuffleWord(){
         manager.shuffleWord()
+    }
+    
+    func loadTasks() {
+        manager.retrieveWord()
     }
 }
