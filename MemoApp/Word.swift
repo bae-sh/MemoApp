@@ -12,11 +12,15 @@ struct Word: Codable, Equatable {
     var word: String
     var meaning: String
     var isDone: Bool
+    var wordIsSelected: Bool
+    var meaningIsSelected: Bool
     
-    mutating func update(word: String, meaning: String, isDone: Bool) {
+    mutating func update(word: String, meaning: String, isDone: Bool,wordIsSelected: Bool,meaningIsSelected: Bool) {
         self.word = word
         self.meaning = meaning
         self.isDone = isDone
+        self.wordIsSelected = wordIsSelected
+        self.meaningIsSelected = meaningIsSelected
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
@@ -34,7 +38,7 @@ class WordManager {
     func creatWord() -> Word {
         let nextId = WordManager.lastId + 1
         WordManager.lastId = nextId
-        return Word(id: nextId, word: "", meaning: "",isDone: false)
+        return Word(id: nextId, word: "", meaning: "",isDone: false,wordIsSelected: false,meaningIsSelected: false)
     }
     
     func addWord(_ word: Word) {
@@ -45,7 +49,7 @@ class WordManager {
     func updateWord(_ word: Word) {
         //TODO: updatee 로직 추가
         guard let index = words.firstIndex(of: word) else { return }
-        words[index].update(word: word.word, meaning: word.meaning, isDone: word.isDone)
+        words[index].update(word: word.word, meaning: word.meaning, isDone: word.isDone,wordIsSelected: word.wordIsSelected,meaningIsSelected: word.meaningIsSelected)
         saveWord()
     }
     

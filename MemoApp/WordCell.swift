@@ -20,6 +20,7 @@ class WordCell: UICollectionViewCell {
     var creatMeaningTapHandler: ((String) -> Void)?
     var deleteCheckBoxTapHandler: ((Bool) -> Void)?
     var checkBoxTapHandler: ((Bool) -> Void)?
+    var wordMeaningButtonTapHandler: ((String, Bool) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,19 +31,13 @@ class WordCell: UICollectionViewCell {
     }
     @IBAction func wordButtonTapped(_ sender: Any) {
         wordButton.isSelected = !wordButton.isSelected
-        if(wordButton.backgroundColor == nil){
-            wordButton.backgroundColor = .systemOrange
-        }else{
-            wordButton.backgroundColor = nil
-        }
+        wordMeaningButtonTapHandler?("word", wordButton.isSelected)
+        buttonHide(button: wordButton)
     }
     @IBAction func meaningButtonTapped(_ sender: Any) {
         meanButton.isSelected = !meanButton.isSelected
-        if(meanButton.backgroundColor == nil){
-            meanButton.backgroundColor = .systemOrange
-        }else{
-            meanButton.backgroundColor = nil
-        }
+        wordMeaningButtonTapHandler?("meaning", meanButton.isSelected)
+        buttonHide(button: meanButton)
     }
     
     @IBAction func deleteCheckButtonTapped(_ sender: Any) {// 체크 버튼 활성화
@@ -56,6 +51,13 @@ class WordCell: UICollectionViewCell {
         checkButton.isSelected = word.isDone
     }
     
+    func buttonHide(button: UIButton!){
+        if(button.isSelected) {
+            button.backgroundColor = .systemOrange
+        }else{
+            button.backgroundColor = nil
+        }
+    }
     func updateUIEditVC(word: Word, isSelected: Bool) {
         wordText.text = word.word
         meaningText.text = word.meaning
@@ -65,8 +67,10 @@ class WordCell: UICollectionViewCell {
     func updateButton(word: Word, button: UIButton!){
         if(button==wordButton){
             button.setTitle(word.word, for: .normal)
+            button.isSelected = word.wordIsSelected
         }else{
             button.setTitle(word.meaning, for: .normal)
+            button.isSelected = word.meaningIsSelected
         }
         
         button.setTitleColor(.black, for: .normal)
@@ -85,6 +89,7 @@ class WordCell: UICollectionViewCell {
             button.setTitleColor(.lightGray, for: .normal)
         }
         
+        buttonHide(button: button)
     }
     @IBAction func creatWord(_ sender: Any) {
         let text = wordText.text ?? ""

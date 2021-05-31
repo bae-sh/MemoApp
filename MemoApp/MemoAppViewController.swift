@@ -68,6 +68,16 @@ extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여�
             word.isDone = isSelected
             self.wordViewModel.updateWord(word)
         }
+        
+        cell.wordMeaningButtonTapHandler = { what, isSelected in
+            if(what == "word"){
+                word.wordIsSelected = isSelected
+            }else{
+                word.meaningIsSelected = isSelected
+            }
+            self.wordViewModel.updateWord(word)
+        }
+        
         cell.updateUIMemoVC(word: word)
         return cell
     }
