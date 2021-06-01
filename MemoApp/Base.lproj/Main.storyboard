@@ -215,8 +215,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d79-qw-hOa">
-                                        <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                        <rect key="frame" x="0.0" y="144" width="414" height="680"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="680" id="agk-pp-1IW"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Cb-K8-HsU">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -231,6 +234,17 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="395" height="71"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meaning..." textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3F8-0g-jFn">
+                                                            <rect key="frame" x="245" y="18.5" width="130" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="130" id="OqP-BP-hIp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                            <connections>
+                                                                <action selector="creatMeaning:" destination="oQd-sP-CSg" eventType="editingDidEnd" id="b5v-EX-InP"/>
+                                                            </connections>
+                                                        </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word..." textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-wE-xia">
                                                             <rect key="frame" x="42" y="18.5" width="130" height="34"/>
                                                             <constraints>
@@ -239,18 +253,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                             <connections>
-                                                                <action selector="creatWord:" destination="oQd-sP-CSg" eventType="editingDidEnd" id="V4y-nU-8yf"/>
-                                                            </connections>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meaning..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3F8-0g-jFn">
-                                                            <rect key="frame" x="245" y="18.5" width="130" height="34"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="130" id="OqP-BP-hIp"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                            <connections>
-                                                                <action selector="creatMeaning:" destination="oQd-sP-CSg" eventType="editingDidEnd" id="b5v-EX-InP"/>
+                                                                <action selector="creatWord:" destination="oQd-sP-CSg" eventType="editingDidEnd" id="oG0-I4-JSJ"/>
                                                             </connections>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umG-F1-jlF">
@@ -392,14 +395,13 @@
                                     <constraint firstItem="SXr-1q-MDL" firstAttribute="trailing" secondItem="WOy-up-ist" secondAttribute="trailing" id="LJ9-EH-yZy"/>
                                     <constraint firstItem="d79-qw-hOa" firstAttribute="leading" secondItem="SXr-1q-MDL" secondAttribute="leading" id="SgP-Zy-Vhk"/>
                                     <constraint firstItem="SXr-1q-MDL" firstAttribute="trailing" secondItem="d79-qw-hOa" secondAttribute="trailing" id="hBk-YN-hoe"/>
-                                    <constraint firstItem="SXr-1q-MDL" firstAttribute="bottom" secondItem="d79-qw-hOa" secondAttribute="bottom" id="irS-Qk-Mlp"/>
                                     <constraint firstItem="WOy-up-ist" firstAttribute="top" secondItem="SXr-1q-MDL" secondAttribute="top" id="mPH-dr-skF"/>
                                     <constraint firstItem="d79-qw-hOa" firstAttribute="top" secondItem="DdS-nv-mnU" secondAttribute="bottom" id="ut2-Lm-Mzm"/>
                                     <constraint firstItem="DdS-nv-mnU" firstAttribute="top" secondItem="WOy-up-ist" secondAttribute="bottom" id="vKQ-r6-LET"/>
                                     <constraint firstItem="SXr-1q-MDL" firstAttribute="trailing" secondItem="DdS-nv-mnU" secondAttribute="trailing" id="xiv-R1-Cfv"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hZf-Bn-EWU" appends="YES" id="XMj-Br-MZt"/>
+                                    <outletCollection property="gestureRecognizers" destination="HzR-le-UuH" appends="YES" id="rwG-PP-qef"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -410,18 +412,19 @@
                     <connections>
                         <outlet property="AllCheckButton" destination="Sor-yX-5Eo" id="7qk-ze-WqB"/>
                         <outlet property="clearButton" destination="fLI-c6-Ydf" id="cdb-oZ-9Gt"/>
-                        <outlet property="collectionView" destination="d79-qw-hOa" id="OYd-Nz-yif"/>
+                        <outlet property="collectionView" destination="d79-qw-hOa" id="8CW-5d-ZVg"/>
+                        <outlet property="collectionViewHeightConstraints" destination="agk-pp-1IW" id="qbB-ch-Yy6"/>
                         <outlet property="deleteButton" destination="fLI-c6-Ydf" id="NjT-B1-9Iz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik2-7U-s9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="hZf-Bn-EWU">
+                <tapGestureRecognizer id="HzR-le-UuH">
                     <connections>
-                        <action selector="tapGesture:" destination="cHb-cX-uvK" id="zMw-Aj-3ZF"/>
+                        <action selector="dismissTap:" destination="cHb-cX-uvK" id="so2-Cp-5qr"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="896" y="99"/>
+            <point key="canvasLocation" x="914" y="98"/>
         </scene>
     </scenes>
     <resources>

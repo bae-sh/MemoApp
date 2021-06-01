@@ -12,21 +12,46 @@ class EditViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var AllCheckButton: UIButton!
+    @IBOutlet weak var collectionViewHeightConstraints: NSLayoutConstraint!
     
     let wordViewModel = WordViewModel()
     var willDeleteWords: [Word] = [] // 체크된 목록 리스트
+    var keyboardIsShowing: Bool = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         clearButton.layer.borderColor = UIColor.systemPink.cgColor // 완료 버튼 테두리
         clearButton.layer.borderWidth = 1.5
         clearButton.layer.cornerRadius = 5
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func tapGesture(_ sender: Any) {//빈 화면 클릭시 키보드 내림
-       self.view.endEditing(true)
+    
+    @objc func keyboardWillShow(_ noti: NSNotification){ // 키보드의 높이만큼 화면을 올려준다.
+        if(!keyboardIsShowing){
+            if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                collectionViewHeightConstraints.constant -= keyboardHeight
+            }
+            keyboardIsShowing = true
+        }
     }
     
+    @objc func keyboardWillHide(_ noti: NSNotification){ // 키보드의 높이만큼 화면을 내려준다.
+        if(keyboardIsShowing){
+            if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                collectionViewHeightConstraints.constant += keyboardHeight
+            }
+            keyboardIsShowing = false;
+        }
+        
+    }
     @IBAction func creatButtonTapped(_ sender: Any) {
         let word = WordManager.shared.creatWord()
         wordViewModel.addWord(word)
@@ -51,6 +76,10 @@ class EditViewController: UIViewController {
         collectionView.reloadData()
     }
     
+    @IBAction func dismissTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     @IBAction func clearButtonTapped(_ sender: Any) {
         dismiss(animated: true){
         }
@@ -72,13 +101,11 @@ extension EditViewController: UICollectionViewDataSource { // 셀을 보여주�
         cell.creatWordTapHandler = { text in
             word.word = text
             self.wordViewModel.updateWord(word)
-            collectionView.reloadData()
         }
         
         cell.creatMeaningTapHandler = { text in
             word.meaning = text
             self.wordViewModel.updateWord(word)
-            collectionView.reloadData()
         }
         cell.deleteCheckBoxTapHandler = { isSelected in
             if isSelected {
