@@ -47,7 +47,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "116">
+                  offsetFromSymbolStart = "140">
                </Location>
                <Location
                   uuid = "969513E2-5F0B-4117-8A4D-AA5FA5DB438F - 1989e99336e4da5b"
@@ -77,7 +77,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
                   endingLineNumber = "16"
-                  offsetFromSymbolStart = "92">
+                  offsetFromSymbolStart = "116">
                </Location>
                <Location
                   uuid = "969513E2-5F0B-4117-8A4D-AA5FA5DB438F - 63873974046d6d34"
@@ -107,8 +107,8 @@
             filePath = "MemoApp/MemoAppViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -123,8 +123,8 @@
             filePath = "MemoApp/MemoAppViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,8 +168,8 @@
             filePath = "MemoApp/MemoAppViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -206,7 +206,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4CB336C2-90C8-49C6-BE7C-FA98BA330388 - a36a81b0adf16225"
+                  uuid = "4CB336C2-90C8-49C6-BE7C-FA98BA330388 - a36a81b0adf161a2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -216,12 +216,12 @@
                   urlString = "file:///Users/baeseonghyeon/study/git/MemoApp/MemoApp/EditViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "1872">
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "1832">
                </Location>
                <Location
-                  uuid = "4CB336C2-90C8-49C6-BE7C-FA98BA330388 - 3045b13417b05e3e"
+                  uuid = "4CB336C2-90C8-49C6-BE7C-FA98BA330388 - 3045b13417b052f1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -231,8 +231,8 @@
                   urlString = "file:///Users/baeseonghyeon/study/git/MemoApp/MemoApp/EditViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
                   offsetFromSymbolStart = "88">
                </Location>
             </Locations>
@@ -250,8 +250,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "EditViewController"
-            landmarkType = "21">
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -264,13 +264,13 @@
             filePath = "MemoApp/MemoAppViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1C8BADEC-EBE6-429A-8675-FAFB5B8C9346 - aa0e28392386de44"
+                  uuid = "1C8BADEC-EBE6-429A-8675-FAFB5B8C9346 - aa0e28392386dd11"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -280,12 +280,12 @@
                   urlString = "file:///Users/baeseonghyeon/study/git/MemoApp/MemoApp/MemoAppViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "928">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "776">
                </Location>
                <Location
-                  uuid = "1C8BADEC-EBE6-429A-8675-FAFB5B8C9346 - 8eb47e4bbe4bb359"
+                  uuid = "1C8BADEC-EBE6-429A-8675-FAFB5B8C9346 - 8eb47e4bbe4bb18e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -295,8 +295,8 @@
                   urlString = "file:///Users/baeseonghyeon/study/git/MemoApp/MemoApp/MemoAppViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
                   offsetFromSymbolStart = "48">
                </Location>
             </Locations>
@@ -315,6 +315,38 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "buttonHide(button:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFD75325-B364-4DB1-AA1F-E4180EB9E1B9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemoApp/MemoAppViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "wordsButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AE75D6A-0E86-4A00-97FB-AEEC21306173"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemoApp/MemoAppViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "wordsButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

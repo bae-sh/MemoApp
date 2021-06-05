@@ -19,6 +19,9 @@ class MemoAppViewController: UIViewController {
     
     let wordViewModel = WordViewModel()
     
+    var wordsHiddenList: [Word] = []
+    var meaningsHiddenList: [Word] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayer()
@@ -50,6 +53,42 @@ class MemoAppViewController: UIViewController {
         wordViewModel.shuffleWord()
         collectionView.reloadData()
     }
+    @IBAction func wordsButtonTapped(_ sender: Any) {
+        if wordsHiddenList.count == wordViewModel.words.count {// 단어 전부 가려져 있다면
+            for var word in wordsHiddenList {
+                word.wordIsSelected = false
+                wordViewModel.updateWord(word)
+            }
+            wordsHiddenList.removeAll()
+        }else{ // 전부 가리기
+            for var word in wordViewModel.words {
+                if !word.wordIsSelected {
+                    word.wordIsSelected = true
+                    wordsHiddenList.append(word)
+                    wordViewModel.updateWord(word)
+                }
+            }
+        }
+        collectionView.reloadData()
+    }
+    @IBAction func meaningsButtonTapped(_ sender: Any) {
+        if meaningsHiddenList.count == wordViewModel.words.count {// 단어 전부 가려져 있다면
+            for var word in meaningsHiddenList {
+                word.meaningIsSelected = false
+                wordViewModel.updateWord(word)
+            }
+            meaningsHiddenList.removeAll()
+        }else{ // 전부 가리기
+            for var word in wordViewModel.words {
+                if !word.meaningIsSelected {
+                    word.meaningIsSelected = true
+                    meaningsHiddenList.append(word)
+                    wordViewModel.updateWord(word)
+                }
+            }
+        }
+        collectionView.reloadData()
+    }
     
 }
 
@@ -76,6 +115,13 @@ extension MemoAppViewController: UICollectionViewDataSource { // 셀을 보여�
                 word.meaningIsSelected = isSelected
             }
             self.wordViewModel.updateWord(word)
+        }
+        
+        if word.wordIsSelected && !wordsHiddenList.contains(word) {
+            wordsHiddenList.append(word)
+        }
+        if word.meaningIsSelected && !meaningsHiddenList.contains(word) {
+           meaningsHiddenList.append(word)
         }
         
         cell.updateUIMemoVC(word: word)

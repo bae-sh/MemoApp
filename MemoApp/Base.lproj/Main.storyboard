@@ -143,28 +143,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-iV-9D2" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="94" width="414" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-nV-XEQ">
-                                        <rect key="frame" x="0.0" y="15" width="207" height="20.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scH-kK-Im1">
+                                        <rect key="frame" x="0.0" y="8.5" width="207" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       Meanings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiD-WT-sXk">
-                                        <rect key="frame" x="207" y="15" width="207" height="20.5"/>
+                                        <state key="normal" title="     Words">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wordsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0DR-2B-VLv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbS-g2-O96">
+                                        <rect key="frame" x="207" y="8.5" width="207" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="       Meanings">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="meaningsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Dh-NK-ybA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="ZiD-WT-sXk" firstAttribute="centerY" secondItem="gNj-iV-9D2" secondAttribute="centerY" id="CWC-T9-PMy"/>
+                                    <constraint firstItem="XbS-g2-O96" firstAttribute="leading" secondItem="scH-kK-Im1" secondAttribute="trailing" id="0TJ-my-AEl"/>
+                                    <constraint firstItem="scH-kK-Im1" firstAttribute="leading" secondItem="gNj-iV-9D2" secondAttribute="leading" id="15Y-rm-XRO"/>
                                     <constraint firstAttribute="height" constant="50" id="CXz-rj-6ED"/>
-                                    <constraint firstItem="Dv7-nV-XEQ" firstAttribute="centerY" secondItem="gNj-iV-9D2" secondAttribute="centerY" id="ES8-c5-I2o"/>
-                                    <constraint firstItem="ZiD-WT-sXk" firstAttribute="leading" secondItem="Dv7-nV-XEQ" secondAttribute="trailing" id="SEw-6s-11X"/>
-                                    <constraint firstItem="ZiD-WT-sXk" firstAttribute="width" secondItem="Dv7-nV-XEQ" secondAttribute="width" id="fzP-mF-G8D"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZiD-WT-sXk" secondAttribute="trailing" id="qQ9-k0-Par"/>
-                                    <constraint firstItem="Dv7-nV-XEQ" firstAttribute="leading" secondItem="gNj-iV-9D2" secondAttribute="leading" id="zTi-UM-GBF"/>
+                                    <constraint firstItem="XbS-g2-O96" firstAttribute="centerY" secondItem="gNj-iV-9D2" secondAttribute="centerY" id="Ef8-3w-zS1"/>
+                                    <constraint firstItem="XbS-g2-O96" firstAttribute="width" secondItem="scH-kK-Im1" secondAttribute="width" id="Glz-rC-1XP"/>
+                                    <constraint firstAttribute="trailing" secondItem="XbS-g2-O96" secondAttribute="trailing" id="eH2-pM-l6c"/>
+                                    <constraint firstItem="scH-kK-Im1" firstAttribute="centerY" secondItem="gNj-iV-9D2" secondAttribute="centerY" id="oCn-L2-9rF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -435,6 +443,9 @@
         <image name="shuffle" catalog="system" width="128" height="93"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
