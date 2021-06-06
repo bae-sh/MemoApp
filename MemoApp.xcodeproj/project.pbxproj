@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F413B78A264D055B0033E5CF /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B789264D055B0033E5CF /* Word.swift */; };
+		F43147DD266C9CDB00EBA8FE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43147DC266C9CDB00EBA8FE /* TestViewController.swift */; };
 		F45206CD26620479000D803F /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45206CC26620479000D803F /* Storage.swift */; };
 		F462E008264BD6E600D1326B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462E007264BD6E600D1326B /* AppDelegate.swift */; };
 		F462E00A264BD6E600D1326B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462E009264BD6E600D1326B /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		F413B789264D055B0033E5CF /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		F43147DC266C9CDB00EBA8FE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F45206CC26620479000D803F /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		F462E004264BD6E600D1326B /* MemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F462E007264BD6E600D1326B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43147DB266C9C9300EBA8FE /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F43147DC266C9CDB00EBA8FE /* TestViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		F462DFFB264BD6E600D1326B = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 				F462E010264BD6E800D1326B /* Assets.xcassets */,
 				F462E012264BD6E800D1326B /* LaunchScreen.storyboard */,
 				F462E015264BD6E800D1326B /* Info.plist */,
+				F43147DB266C9C9300EBA8FE /* Test */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			files = (
 				F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */,
 				F45206CD26620479000D803F /* Storage.swift in Sources */,
+				F43147DD266C9CDB00EBA8FE /* TestViewController.swift in Sources */,
 				F462E00C264BD6E600D1326B /* MemoAppViewController.swift in Sources */,
 				F462E008264BD6E600D1326B /* AppDelegate.swift in Sources */,
 				F4C3A46F2659043600BC9C70 /* WordCell.swift in Sources */,
