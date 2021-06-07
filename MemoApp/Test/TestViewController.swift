@@ -24,5 +24,22 @@ class TestViewController: UIViewController {
     @IBAction func textTestCount(_ sender: Any) {
         testCount = Int(testCountTextField.text!) ?? 0
     }
+    @IBAction func startButtonTapped(_ sender: Any) {
+        if testCount > wordViewModel.words.count || testCount == 0 {
+            showAlert()
+        } else {
+            performSegue(withIdentifier: "timer", sender: testCount)
+        }
+    }
     
+    func showAlert() {
+        let message = "테스트의 수는 1 이상 \(wordViewModel.words.count) 이하의 값이어야 합니다."
+        
+        let alert = UIAlertController(title: "에러", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 }
+
+

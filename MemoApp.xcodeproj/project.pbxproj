@@ -16,6 +16,7 @@
 		F462E00F264BD6E600D1326B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462E00D264BD6E600D1326B /* Main.storyboard */; };
 		F462E011264BD6E800D1326B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F462E010264BD6E800D1326B /* Assets.xcassets */; };
 		F462E014264BD6E800D1326B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462E012264BD6E800D1326B /* LaunchScreen.storyboard */; };
+		F49F5ABA266E0CAB008D2B22 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F5AB9266E0CAB008D2B22 /* TimerViewController.swift */; };
 		F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */; };
 		F4C3A46F2659043600BC9C70 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A46E2659043600BC9C70 /* WordCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		F462E010264BD6E800D1326B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F462E013264BD6E800D1326B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F462E015264BD6E800D1326B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49F5AB9266E0CAB008D2B22 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		F4C3A46E2659043600BC9C70 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F43147DC266C9CDB00EBA8FE /* TestViewController.swift */,
+				F49F5AB9266E0CAB008D2B22 /* TimerViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */,
+				F49F5ABA266E0CAB008D2B22 /* TimerViewController.swift in Sources */,
 				F45206CD26620479000D803F /* Storage.swift in Sources */,
 				F43147DD266C9CDB00EBA8FE /* TestViewController.swift in Sources */,
 				F462E00C264BD6E600D1326B /* MemoAppViewController.swift in Sources */,

@@ -226,9 +226,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-y9-MMC">
-                                        <rect key="frame" x="176" y="629" width="62" height="48"/>
+                                        <rect key="frame" x="176" y="625.5" width="62" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="l8Z-ou-7c5" eventType="touchUpInside" id="bkV-fo-Ybv"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I16-er-6Il">
                                         <rect key="frame" x="163" y="60" width="88" height="60"/>
@@ -236,14 +239,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단어의 수를 입력하시오" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-AG-LKE">
-                                        <rect key="frame" x="73.5" y="340" width="267" height="34"/>
-                                        <fontDescription key="fontDescription" name="JCkg" family="GungSeo" pointSize="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테스트 할 단어의 수를 입력하시오" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjM-AG-LKE">
+                                        <rect key="frame" x="35" y="340" width="344" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="JCkg" family="GungSeo" pointSize="26"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwH-VX-yPj">
-                                        <rect key="frame" x="132" y="404" width="150" height="40"/>
+                                        <rect key="frame" x="132" y="400.5" width="150" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="K5G-dc-eNe"/>
                                             <constraint firstAttribute="width" constant="150" id="uuk-v9-oYy"/>
@@ -284,6 +287,7 @@
                     <tabBarItem key="tabBarItem" title="Test" image="pencil" catalog="system" id="6du-GZ-RHO"/>
                     <connections>
                         <outlet property="testCountTextField" destination="SwH-VX-yPj" id="VVU-Oc-HeK"/>
+                        <segue destination="k8m-iG-SJX" kind="show" identifier="timer" id="Gvr-2c-gBH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4db-hn-8mQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,7 +297,42 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3171.0144927536235" y="22.767857142857142"/>
+            <point key="canvasLocation" x="3170" y="123"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="VjY-3a-UgM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="k8m-iG-SJX" customClass="TimerViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uqP-cC-FcN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgS-lL-9gf">
+                                <rect key="frame" x="132" y="258" width="150" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1v3-N2-7OE"/>
+                                    <constraint firstAttribute="height" constant="200" id="5g3-Z9-wFz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aBF-VD-g3B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wgS-lL-9gf" firstAttribute="top" secondItem="aBF-VD-g3B" secondAttribute="top" constant="214" id="gu6-Ow-dOl"/>
+                            <constraint firstItem="wgS-lL-9gf" firstAttribute="centerX" secondItem="aBF-VD-g3B" secondAttribute="centerX" id="sB6-ae-d9n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fha-5B-ovx"/>
+                    <connections>
+                        <outlet property="timeTextfield" destination="wgS-lL-9gf" id="ws1-mX-cWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSG-jG-CVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3939" y="133"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="m0r-8A-hY7">
