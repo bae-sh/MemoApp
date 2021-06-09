@@ -20,6 +20,7 @@
 		F4B6217A266F4D7D0095F68C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B62179266F4D7D0095F68C /* TestViewController.swift */; };
 		F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */; };
 		F4C3A46F2659043600BC9C70 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C3A46E2659043600BC9C70 /* WordCell.swift */; };
+		F4D67D112670B9C300A695DB /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67D102670B9C300A695DB /* CompleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F4B62179266F4D7D0095F68C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F4C3A46A2658F1C300BC9C70 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		F4C3A46E2659043600BC9C70 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		F4D67D102670B9C300A695DB /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				F43147DC266C9CDB00EBA8FE /* TestReadyViewController.swift */,
 				F49F5AB9266E0CAB008D2B22 /* TimerViewController.swift */,
 				F4B62179266F4D7D0095F68C /* TestViewController.swift */,
+				F4D67D102670B9C300A695DB /* CompleteViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				F4C3A46B2658F1C300BC9C70 /* EditViewController.swift in Sources */,
 				F49F5ABA266E0CAB008D2B22 /* TimerViewController.swift in Sources */,
 				F45206CD26620479000D803F /* Storage.swift in Sources */,
+				F4D67D112670B9C300A695DB /* CompleteViewController.swift in Sources */,
 				F43147DD266C9CDB00EBA8FE /* TestReadyViewController.swift in Sources */,
 				F462E00C264BD6E600D1326B /* MemoAppViewController.swift in Sources */,
 				F462E008264BD6E600D1326B /* AppDelegate.swift in Sources */,

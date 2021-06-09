@@ -665,11 +665,60 @@
                         <outlet property="numberOneButton" destination="rUq-GU-TfO" id="DnD-qx-dvf"/>
                         <outlet property="numberThreeButton" destination="mcX-WN-Xgn" id="QbZ-JF-3UJ"/>
                         <outlet property="numberTwoButton" destination="xU5-Y5-KBL" id="NG0-ST-stz"/>
+                        <outlet property="questionWord" destination="oNB-te-kNB" id="zyC-F2-HQ1"/>
+                        <segue destination="QPm-Kk-gvJ" kind="show" identifier="complete" id="nsu-N3-wsv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auY-ri-sGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3266.666666666667" y="862.5"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="HNh-mJ-Asl">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="QPm-Kk-gvJ" customClass="CompleteViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aEG-jV-ymv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="완료" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Far-Tt-qgF">
+                                <rect key="frame" x="175" y="276" width="99" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-fl-nSq">
+                                <rect key="frame" x="183" y="575" width="49" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="isDoneButtonTapped:" destination="QPm-Kk-gvJ" eventType="touchUpInside" id="qv4-3F-92z"/>
+                                    <segue destination="QoM-nj-3Il" kind="unwind" unwindAction="unwindReadyVCWithSegue:" id="Ibf-DY-jSD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-bu-DH1">
+                                <rect key="frame" x="56" y="438" width="276" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q7n-nt-dVL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="etr-N9-9VG"/>
+                    <connections>
+                        <outlet property="isDone" destination="xOS-fl-nSq" id="Iww-uk-eu8"/>
+                        <outlet property="score" destination="3hy-bu-DH1" id="lrs-h4-Ocz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fh-yo-vdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="QoM-nj-3Il" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4150.7246376811599" y="856.47321428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jtP-0X-5L3">

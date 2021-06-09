@@ -15,6 +15,7 @@ struct Word: Codable, Equatable {
     var wordIsSelected: Bool
     var meaningIsSelected: Bool
     
+    
     mutating func update(word: String, meaning: String, isDone: Bool,wordIsSelected: Bool,meaningIsSelected: Bool) {
         self.word = word
         self.meaning = meaning

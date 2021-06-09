@@ -3,15 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "WordManager.addWord(_:):Word.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TestViewController.wordShuffle():TestViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "testWords">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in MemoAppViewController.collectionView(_:cellForItemAt:):MemoAppViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "indexPath">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "WordManager.addWord(_:):Word.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
