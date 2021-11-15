@@ -27,6 +27,7 @@ class TestReadyViewController: UIViewController {
     }
     @IBAction func startButtonTapped(_ sender: Any) {
         if testCount > wordViewModel.words.count || testCount == 0 {
+            print(testCount);
             showAlert()
         } else {
             performSegue(withIdentifier: "timer", sender: nil)
